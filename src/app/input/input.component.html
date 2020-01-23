@@ -6,6 +6,7 @@
       class="input is-danger"
       type="text"
       [formControl]="control"
+      mask="(000)-000-0000"
     />
   </div>
   <ng-container *ngIf="showErrors()">
@@ -26,7 +27,7 @@
       characters
     </div>
     <div class="help is-danger" *ngIf="control.errors && control.errors.pattern">
-      Invalid format
+      Invalid format: MM/DD
     </div>
   </ng-container>
 </div>
